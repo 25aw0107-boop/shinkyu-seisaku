@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ウトナイ湖湿原</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/styles.css">
+
+    <link rel="icon" href="../images/icon.png">
+
+    <script src="../js/ut-birds.js" type="module" defer></script>
+
+</head>
+
+<body>
+
+    <header class="site-header">
+        <!-- 用来控制菜单开关的隐藏 checkbox -->
+        <input type="checkbox" id="nav-toggle" class="site-header__checkbox">
+
+        <div class="site-header__inner">
+
+            <!-- 左侧 LOGO 区域 -->
+            <div class="site-header__logo">
+                <a href="../index.html" class="site-header__logo-link">
+                    <img src="../images/logo-bird.png" alt="野鳥観察×湿原" class="site-header__logo-img">
+                </a>
+            </div>
+
+            <nav class="pc-nav" aria-label="グローバルナビゲーション(PC)">
+                <ul class="pc-nav__list">
+
+                    <li class="pc-nav__item pc-nav__item--has-sub">
+                        <a class="pc-nav__trigger" href="../Kushiro/index.html">
+                            <span class="pc-nav__chev" aria-hidden="true"></span>
+                            野鳥図鑑
+                        </a>
+
+                        <ul class="pc-nav__submenu" aria-label="野鳥図鑑 サブメニュー">
+                            <li class="pc-nav__submenu-item"><a href="../Kushiro/index.html">釧路湿原</a></li>
+                            <li class="pc-nav__submenu-item"><a href="../Utonai/index.html">ウトナイ湖湿原</a></li>
+                            <li class="pc-nav__submenu-item"><a href="../Izunuma/index.html">伊豆沼・内沼湿原</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="pc-nav__item pc-nav__item--has-sub">
+                        <a class="pc-nav__trigger" href="https://ninpostudio.studio.site/nipponshitsugen-project"
+                            target="_blank" rel="noopener">
+                            <span class="pc-nav__chev" aria-hidden="true"></span>
+                            日本湿原PROJECTについて
+                        </a>
+
+                        <ul class="pc-nav__submenu" aria-label="日本湿原PROJECT サブメニュー">
+                            <li class="pc-nav__submenu-item">
+                                <a href="https://ninpostudio.studio.site/nipponshitsugen-project" target="_blank"
+                                    rel="noopener">公式サイト</a>
+                            </li>
+                            <li class="pc-nav__submenu-item">
+                                <a href="https://ninpostudio.studio.site/nipponshitsugen-project/form" target="_blank"
+                                    rel="noopener">お問い合わせ</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                </ul>
+            </nav>
+
+            <!-- 右侧汉堡按钮 -->
+            <label for="nav-toggle" class="site-header__toggle" aria-label="メニューを開く/閉じる">
+                <span class="site-header__toggle-line"></span>
+                <span class="site-header__toggle-line"></span>
+                <span class="site-header__toggle-line"></span>
+            </label>
+
+        </div>
+
+        <!-- 抽屉菜单（点击汉堡按钮后出现的导航页） -->
+        <div class="site-header__drawer">
+
+            <div class="site-header__drawer-inner">
+
+                <!-- 右上角 X 关闭按钮 -->
+                <label for="nav-toggle" class="site-header__drawer-close" aria-label="メニューを閉じる">
+                    <span></span>
+                    <span></span>
+                </label>
+
+                <!-- 抽屉里的 logo（和顶部一样） -->
+                <div class="site-header__drawer-logo">
+                    <a href="../index.html" class="site-header__logo-link">
+                        <img src="../images/logo-bird.png" alt="野鳥観察×湿原"
+                            class="site-header__logo-img site-header__logo-img--drawer">
+                    </a>
+                </div>
+
+                <!-- 导航内容 -->
+                <nav class="site-header__drawer-nav" aria-label="グローバルナビゲーション（モバイル）">
+                    <ul class="site-header__drawer-list">
+
+                        <!-- 野鳥図鑑 -->
+                        <li class="site-header__drawer-block">
+                            <p class="site-header__drawer-heading">&gt; 野鳥図鑑</p>
+                            <div class="site-header__drawer-buttons">
+                                <a href="../Kushiro/index.html" class="drawer-pill">釧路湿原</a>
+                                <a href="index.html" class="drawer-pill">ウトナイ湖湿原</a>
+                                <a href="../Izunuma/index.html" class="drawer-pill">伊豆沼・内沼湿原</a>
+                            </div>
+                        </li>
+
+                        <!-- 日本湿原PROJECTについて -->
+                        <li class="site-header__drawer-block">
+                            <p class="site-header__drawer-heading">&gt; 日本湿原PROJECTについて</p>
+                            <div class="site-header__drawer-buttons">
+                                <a href="https://ninpostudio.studio.site/nipponshitsugen-project"
+                                    class="drawer-pill drawer-pill--solid" target="_blank" rel="noopener">
+                                    公式サイト
+                                </a>
+                                <a href="https://ninpostudio.studio.site/nipponshitsugen-project/form"
+                                    class="drawer-pill" target="_blank" rel="noopener">お問い合わせ</a>
+                            </div>
+                        </li>
+
+                    </ul>
+
+                    <!-- トップページ 按钮 -->
+                    <a href="../index.html" class="drawer-main-button">トップページ</a>
+
+                    <!-- SNS 图标 -->
+                    <div class="drawer-sns">
+                        <a href="#" class="drawer-sns__item" aria-label="Instagram">
+                            <img src="../images/icon-instagram-green.png" alt="Instagram">
+                        </a>
+                        <a href="#" class="drawer-sns__item" aria-label="X(旧Twitter)">
+                            <img src="../images/icon-x-green.png" alt="X">
+                        </a>
+                        <a href="#" class="drawer-sns__item" aria-label="Facebook">
+                            <img src="../images/icon-facebook-green.png" alt="Facebook">
+                        </a>
+                    </div>
+                </nav>
+
+            </div>
+        </div>
+    </header>
+
+    <main class="kr-page">
+        <section class="kr-hero">
+            <div class="kr-hero__media-wrap">
+                <div class="kr-hero__media">
+                    <video class="kr-hero__video" autoplay muted loop playsinline>
+                        <source src="../videos/sample3.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+
+            <div class="kr-hero__content">
+                <h2 class="kr-hero__title">ウトナイ湖湿原</h2>
+                <p class="kr-hero__text">ラムサール条約に登録された北海道屈指の渡り鳥の中継地。
+                    年間を通して250種以上の多様な野鳥を観察できる豊かな湿地である。</p>
+
+                <div class="kr-hero__buttons">
+                    <a href="../Kushiro/index.html" class="kr-btn">釧路湿原</a>
+                    <a href="#" class="kr-btn kr-btn--primary">ウトナイ湖湿原</a>
+                    <a href="../Izunuma/index.html" class="kr-btn">伊豆沼・内沼湿原</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="kr-list">
+            <header class="kr-list__header">
+                <h2 class="kr-list__title">ウトナイ湖湿原の野鳥図鑑</h2>
+                <p class="kr-list__note">（全<span id="ut-total-count">0</span>種）</p>
+            </header>
+
+            <ul class="kr-bird-list" id="ut-bird-list"></ul>
+
+            <nav class="article-list__pagination" aria-label="図鑑のページ送り">
+                <ul class="pagination" id="ut-pagination"></ul>
+            </nav>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="site-footer__inner">
+
+            <!-- 项目名 -->
+            <h2 class="site-footer__title">日本湿原PROJECT</h2>
+
+            <!-- SNS 图标区域 -->
+            <div class="site-footer__social">
+                <a href="#" class="site-footer__social-link" aria-label="Instagram">
+                    <img src="../images/icon-instagram.png" alt="Instagram">
+                </a>
+                <a href="#" class="site-footer__social-link" aria-label="X(旧Twitter)">
+                    <img src="../images/icon-x.png" alt="X">
+                </a>
+                <a href="#" class="site-footer__social-link" aria-label="Facebook">
+                    <img src="../images/icon-facebook.png" alt="Facebook">
+                </a>
+            </div>
+
+            <!-- 底部文本 -->
+            <p class="site-footer__copy">
+                © 2025 NWP PROJECT
+            </p>
+
+        </div>
+    </footer>
+</body>
+
+</html>

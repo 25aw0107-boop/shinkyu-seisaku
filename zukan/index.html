@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>野鳥詳細</title>
+
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/styles.css" />
+
+    <link rel="icon" href="../images/icon.png">
+
+    <script src="../js/bird-detail.js" type="module" defer></script>
+</head>
+
+<body>
+
+    <header class="site-header">
+        <input type="checkbox" id="nav-toggle" class="site-header__checkbox">
+        <div class="site-header__inner">
+
+            <!-- 左侧 LOGO 区域 -->
+            <div class="site-header__logo">
+                <a href="../index.html" class="site-header__logo-link">
+                    <img src="../images/logo-bird.png" alt="野鳥観察×湿原" class="site-header__logo-img">
+                </a>
+            </div>
+
+            <nav class="pc-nav" aria-label="グローバルナビゲーション（PC）">
+                <ul class="pc-nav__list">
+
+                    <li class="pc-nav__item pc-nav__item--has-sub">
+                        <a class="pc-nav__trigger" href="../Kushiro/index.html">
+                            <span class="pc-nav__chev" aria-hidden="true"></span>
+                            野鳥図鑑
+                        </a>
+
+                        <ul class="pc-nav__submenu" aria-label="野鳥図鑑 サブメニュー">
+                            <li class="pc-nav__submenu-item"><a href="../Kushiro/index.html">釧路湿原</a></li>
+                            <li class="pc-nav__submenu-item"><a href="../Utonai/index.html">ウトナイ湖湿原</a></li>
+                            <li class="pc-nav__submenu-item"><a href="../Izunuma/index.html">伊豆沼・内沼湿原</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="pc-nav__item pc-nav__item--has-sub">
+                        <a class="pc-nav__trigger" href="https://ninpostudio.studio.site/nipponshitsugen-project"
+                            target="_blank" rel="noopener">
+                            <span class="pc-nav__chev" aria-hidden="true"></span>
+                            日本湿原PROJECTについて
+                        </a>
+
+                        <ul class="pc-nav__submenu" aria-label="日本湿原PROJECT サブメニュー">
+                            <li class="pc-nav__submenu-item">
+                                <a href="https://ninpostudio.studio.site/nipponshitsugen-project" target="_blank"
+                                    rel="noopener">公式サイト</a>
+                            </li>
+                            <li class="pc-nav__submenu-item">
+                                <a href="https://ninpostudio.studio.site/nipponshitsugen-project/form" target="_blank"
+                                    rel="noopener">お問い合わせ</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                </ul>
+            </nav>
+
+            <label for="nav-toggle" class="site-header__toggle" aria-label="メニューを開く/閉じる">
+                <span class="site-header__toggle-line"></span>
+                <span class="site-header__toggle-line"></span>
+                <span class="site-header__toggle-line"></span>
+            </label>
+        </div>
+
+        <div class="site-header__drawer">
+            <div class="site-header__drawer-inner">
+                <label for="nav-toggle" class="site-header__drawer-close" aria-label="メニューを閉じる">
+                    <span></span><span></span>
+                </label>
+
+                <!-- 抽屉里的 logo（和顶部一样） -->
+                <div class="site-header__drawer-logo">
+                    <a href="../index.html" class="site-header__logo-link">
+                        <img src="../images/logo-bird.png" alt="野鳥観察×湿原"
+                            class="site-header__logo-img site-header__logo-img--drawer">
+                    </a>
+                </div>
+
+                <nav class="site-header__drawer-nav" aria-label="グローバルナビゲーション（モバイル）">
+                    <ul class="site-header__drawer-list">
+                        <li class="site-header__drawer-block">
+                            <p class="site-header__drawer-heading">&gt; 野鳥図鑑</p>
+                            <div class="site-header__drawer-buttons">
+                                <a href="../Kushiro/index.html" class="drawer-pill">釧路湿原</a>
+                                <a href="../Utonai/index.html" class="drawer-pill">ウトナイ湖湿原</a>
+                                <a href="../Izunuma/index.html" class="drawer-pill">伊豆沼・内沼湿原</a>
+                            </div>
+                        </li>
+
+                        <!-- 日本湿原PROJECTについて -->
+                        <li class="site-header__drawer-block">
+                            <p class="site-header__drawer-heading">&gt; 日本湿原PROJECTについて</p>
+                            <div class="site-header__drawer-buttons">
+                                <a href="https://ninpostudio.studio.site/nipponshitsugen-project"
+                                    class="drawer-pill drawer-pill--solid" target="_blank" rel="noopener">
+                                    公式サイト
+                                </a>
+                                <a href="https://ninpostudio.studio.site/nipponshitsugen-project/form"
+                                    class="drawer-pill" target="_blank" rel="noopener">お問い合わせ</a>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <a href="../index.html" class="drawer-main-button">トップページ</a>
+
+                    <!-- SNS 图标 -->
+                    <div class="drawer-sns">
+                        <a href="#" class="drawer-sns__item" aria-label="Instagram">
+                            <img src="../images/icon-instagram-green.png" alt="Instagram">
+                        </a>
+                        <a href="#" class="drawer-sns__item" aria-label="X(旧Twitter)">
+                            <img src="../images/icon-x-green.png" alt="X">
+                        </a>
+                        <a href="#" class="drawer-sns__item" aria-label="Facebook">
+                            <img src="../images/icon-facebook-green.png" alt="Facebook">
+                        </a>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="page-main">
+        <article class="zukan-detail">
+
+            <!-- 上部：画像 -->
+            <div class="zukan-detail__hero">
+                <img id="bird-image" class="zukan-detail__hero-img" src="" alt="">
+            </div>
+            <div class="zukan-detail__spacer"></div>
+
+            <section class="zukan-detail__card">
+                <!-- 顶部按钮：基本情報 / コピー -->
+                <div class="zukan-detail__top-actions">
+                    <button class="zukan-pill zukan-pill--ghost" type="button" id="btn-scroll-basic">基本情報</button>
+                    <button class="zukan-pill zukan-pill--solid" type="button" id="btn-copy">コピー</button>
+                </div>
+
+                <!-- 简介（可选） -->
+                <p class="zukan-detail__desc" id="bird-desc"></p>
+
+                <!-- 各区块（JS 注入内容） -->
+                <!-- 各区块（HTML 写死标签，JS 只填值） -->
+
+                <section class="zukan-block" id="bird-basic-info">
+                    <dl class="zukan-dl">
+                        <div class="zukan-dl__row">
+                            <dt>和名：</dt>
+                            <dd id="basic-waName"></dd>
+                        </div>
+
+                        <div class="zukan-dl__row">
+                            <dt>学名：</dt>
+                            <dd id="basic-gakuName"></dd>
+                        </div>
+
+                        <div class="zukan-dl__row">
+                            <dt>英名：</dt>
+                            <dd id="basic-eiName"></dd>
+                        </div>
+
+                        <div class="zukan-dl__row">
+                            <dt>分類：</dt>
+                            <dd id="basic-classification"></dd>
+                        </div>
+
+                        <div class="zukan-dl__row">
+                            <dt>体長：</dt>
+                            <dd id="basic-bodyLength"></dd>
+                        </div>
+
+                        <div class="zukan-dl__row">
+                            <dt>翼開長：</dt>
+                            <dd id="basic-wingspan"></dd>
+                        </div>
+
+                        <div class="zukan-dl__row">
+                            <dt>見られる時期：</dt>
+                            <dd id="basic-season"></dd>
+                        </div>
+
+                        <div class="zukan-dl__row">
+                            <dt>生息地：</dt>
+                            <dd id="basic-habitat"></dd>
+                        </div>
+                    </dl>
+                </section>
+
+                <section class="zukan-block" id="bird-ecology">
+                    <h3 class="zukan-block__title">生態データ</h3>
+
+                    <dl class="zukan-dl">
+                        <div class="zukan-dl__row">
+                            <dt>寿命：</dt>
+                            <dd id="eco-lifespan"></dd>
+                        </div>
+
+                        <div class="zukan-dl__row">
+                            <dt>食性：</dt>
+                            <dd id="eco-diet"></dd>
+                        </div>
+
+                        <div class="zukan-dl__row">
+                            <dt>繁殖：</dt>
+                            <dd id="eco-breeding"></dd>
+                        </div>
+
+                        <div class="zukan-dl__row">
+                            <dt>ペアの習性：</dt>
+                            <dd id="eco-pair"></dd>
+                        </div>
+
+                        <div class="zukan-dl__row">
+                            <dt>保護状況：</dt>
+                            <dd id="eco-status"></dd>
+                        </div>
+                    </dl>
+                </section>
+
+                <section class="zukan-block" id="bird-features">
+                    <h3 class="zukan-block__title">外見の特徴</h3>
+                    <ul class="zukan-list" id="list-appearance"></ul>
+                </section>
+
+                <section class="zukan-block" id="bird-behavior">
+                    <h3 class="zukan-block__title">よく見られる行動</h3>
+                    <ul class="zukan-list" id="list-behavior"></ul>
+                </section>
+
+                <section class="zukan-block" id="bird-cautions">
+                    <h3 class="zukan-block__title">観察時の注意点</h3>
+                    <ul class="zukan-list" id="list-cautions"></ul>
+                </section>
+
+                <!-- 返回 -->
+                <p class="zukan-detail__back">
+                    <a id="bird-back-link" href="../Kushiro/index.html">戻る</a>
+                </p>
+
+            </section>
+        </article>
+    </main>
+
+    <footer class="site-footer">
+        <div class="site-footer__inner">
+            <h2 class="site-footer__title">日本湿原PROJECT</h2>
+            <div class="site-footer__social">
+                <a href="#" class="site-footer__social-link" aria-label="Instagram">
+                    <img src="../images/icon-instagram.png" alt="Instagram">
+                </a>
+                <a href="#" class="site-footer__social-link" aria-label="X(旧Twitter)">
+                    <img src="../images/icon-x.png" alt="X">
+                </a>
+                <a href="#" class="site-footer__social-link" aria-label="Facebook">
+                    <img src="../images/icon-facebook.png" alt="Facebook">
+                </a>
+            </div>
+            <p class="site-footer__copy">© 2025 NWP PROJECT</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

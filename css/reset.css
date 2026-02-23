@@ -1,0 +1,71 @@
+/* === Reset 基础清除样式 === */
+* {
+  margin: 0;
+  /* 清除外边距 */
+  padding: 0;
+  /* 清除内边距 */
+  box-sizing: border-box;
+  /* 设置盒模型为边框盒子 */
+}
+
+html,
+body {
+  height: 100%;
+  /* 保证页面高度填满 */
+  font-family: 'Arial', sans-serif;
+  /* 设置默认字体 */
+  line-height: 1.6;
+  /* 更好的阅读体验 */
+  background-color: #fdfdfd;
+  /* 页面背景色 */
+  color: #333;
+  /* 字体颜色 */
+}
+
+/* 图片不超过容器 */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* 清除列表样式 */
+ul,
+ol {
+  list-style: none;
+}
+
+/* 链接默认样式清除 */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* 表单元素统一样式 */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  border: none;
+  outline: none;
+  background: none;
+}
+
+/* 按钮样式初始化 */
+button {
+  cursor: pointer;
+}
+
+/* 表格默认处理 */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}

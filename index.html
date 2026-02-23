@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>野鳥図鑑・湿地帯の野鳥たち</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <script src="js/articles.js" defer></script>
+    <script src="js/bird-arc.js" defer></script>
+    <script src="js/catalog-hero.js" defer></script>
+    <script src="js/scope-hero-enter.js" defer></script>
+
+    <link rel="icon" href="./images/icon.png">
+
+</head>
+
+<body>
+    <!-- header -->
+    <header class="site-header">
+        <!-- 用来控制菜单开关的隐藏 checkbox -->
+        <input type="checkbox" id="nav-toggle" class="site-header__checkbox">
+        <div class="site-header__inner">
+            <!-- 左侧 LOGO 区域 -->
+            <div class="site-header__logo">
+                <a href="index.html" class="site-header__logo-link">
+                    <img src="images/logo-bird.png" alt="野鳥観察×湿原" class="site-header__logo-img">
+                </a>
+            </div>
+            <nav class="pc-nav" aria-label="グローバルナビゲーション(PC)">
+                <ul class="pc-nav__list">
+                    <li class="pc-nav__item pc-nav__item--has-sub">
+                        <a class="pc-nav__trigger" href="Kushiro/index.html">
+                            <span class="pc-nav__chev" aria-hidden="true"></span>
+                            野鳥図鑑
+                        </a>
+                        <ul class="pc-nav__submenu" aria-label="野鳥図鑑 サブメニュー">
+                            <li class="pc-nav__submenu-item"><a href="Kushiro/index.html">釧路湿原</a></li>
+                            <li class="pc-nav__submenu-item"><a href="Utonai/index.html">ウトナイ湖湿原</a></li>
+                            <li class="pc-nav__submenu-item"><a href="Izunuma/index.html">伊豆沼・内沼湿原</a></li>
+                        </ul>
+                    </li>
+                    <li class="pc-nav__item pc-nav__item--has-sub">
+                        <a class="pc-nav__trigger" href="https://ninpostudio.studio.site/nipponshitsugen-project"
+                            target="_blank" rel="noopener">
+                            <span class="pc-nav__chev" aria-hidden="true"></span>
+                            日本湿原PROJECTについて
+                        </a>
+                        <ul class="pc-nav__submenu" aria-label="日本湿原PROJECT サブメニュー">
+                            <li class="pc-nav__submenu-item">
+                                <a href="https://ninpostudio.studio.site/nipponshitsugen-project" target="_blank"
+                                    rel="noopener">公式サイト</a>
+                            </li>
+                            <li class="pc-nav__submenu-item">
+                                <a href="https://ninpostudio.studio.site/nipponshitsugen-project/form" target="_blank"
+                                    rel="noopener">お問い合わせ</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                </ul>
+            </nav>
+
+            <!-- 右侧汉堡按钮 -->
+            <label for="nav-toggle" class="site-header__toggle" aria-label="メニューを開く/閉じる">
+                <span class="site-header__toggle-line"></span>
+                <span class="site-header__toggle-line"></span>
+                <span class="site-header__toggle-line"></span>
+            </label>
+        </div>
+
+        <!-- 抽屉菜单（点击汉堡按钮后出现的导航页） -->
+        <div class="site-header__drawer">
+            <div class="site-header__drawer-inner">
+
+                <!-- 右上角 X 关闭按钮 -->
+                <label for="nav-toggle" class="site-header__drawer-close" aria-label="メニューを閉じる">
+                    <span></span>
+                    <span></span>
+                </label>
+
+                <!-- 抽屉里的 logo（和顶部一样） -->
+                <div class="site-header__drawer-logo">
+                    <a href="index.html" class="site-header__logo-link">
+                        <img src="images/logo-bird.png" alt="野鳥観察×湿原"
+                            class="site-header__logo-img site-header__logo-img--drawer">
+                    </a>
+                </div>
+
+                <nav class="site-header__drawer-nav" aria-label="グローバルナビゲーション（モバイル）">
+                    <ul class="site-header__drawer-list">
+                        <li class="site-header__drawer-block">
+                            <p class="site-header__drawer-heading">&gt; 野鳥図鑑</p>
+                            <div class="site-header__drawer-buttons">
+                                <a href="Kushiro/index.html" class="drawer-pill">釧路湿原</a>
+                                <a href="Utonai/index.html" class="drawer-pill">ウトナイ湖湿原</a>
+                                <a href="Izunuma/index.html" class="drawer-pill">伊豆沼・内沼湿原</a>
+                            </div>
+                        </li>
+
+                        <li class="site-header__drawer-block">
+                            <p class="site-header__drawer-heading">&gt; 日本湿原PROJECTについて</p>
+                            <div class="site-header__drawer-buttons">
+                                <a href="https://ninpostudio.studio.site/nipponshitsugen-project"
+                                    class="drawer-pill drawer-pill--solid" target="_blank" rel="noopener">
+                                    公式サイト
+                                </a>
+                                <a href="https://ninpostudio.studio.site/nipponshitsugen-project/form"
+                                    class="drawer-pill" target="_blank" rel="noopener">お問い合わせ</a>
+                            </div>
+                        </li>
+
+                    </ul>
+                    <!-- トップページ 按钮 -->
+                    <a href="/index.html" class="drawer-main-button">トップページ</a>
+
+                    <div class="drawer-sns">
+                        <a href="#" class="drawer-sns__item" aria-label="Instagram">
+                            <img src="images/icon-instagram-green.png" alt="Instagram">
+                        </a>
+                        <a href="#" class="drawer-sns__item" aria-label="X(旧Twitter)">
+                            <img src="images/icon-x-green.png" alt="X">
+                        </a>
+                        <a href="#" class="drawer-sns__item" aria-label="Facebook">
+                            <img src="images/icon-facebook-green.png" alt="Facebook">
+                        </a>
+                    </div>
+                </nav>
+
+            </div>
+        </div>
+    </header>
+
+    <!-- Main -->
+    <main class="page-main">
+        <div class="home-stack">
+            <!-- 望遠鏡セクション -->
+            <section class="scope-hero">
+                <div class="scope-hero__scene">
+                    <!-- 背景：河流（背景色・グラデーションで表現） -->
+                    <div class="scope-hero__bg-river" aria-hidden="true"></div>
+
+                    <!-- 背景：右上角的土地形状（单独图片） -->
+                    <div class="scope-hero__bg-land">
+                        <img src="images/bg-land-top-right.png" alt="背景の丘のシルエット">
+                    </div>
+
+                    <!-- 背景：树的剪影（3 棵树，单独图片） -->
+                    <div class="scope-hero__bg-trees">
+                        <img class="scope-hero__bg-trees-left" src="images/tree-left.png" alt="左側の木">
+                        <img class="scope-hero__bg-trees-center" src="images/tree-center.png" alt="中央の木">
+                        <img class="scope-hero__bg-trees-center2" src="images/tree-center.png" alt="中央の木2">
+                        <img class="scope-hero__bg-trees-center3" src="images/tree-center.png" alt="中央の木3">
+                        <img class="scope-hero__bg-trees-right" src="images/tree-right.png" alt="右側の木">
+                    </div>
+
+                    <!-- 背景：飞鸟剪影（暂时隐藏，用 CSS 控制） -->
+                    <div class="scope-hero__bg-birds">
+                        <div class="bird bird--a">
+                            <img src="images/birdA_frame1.png" alt="鳥Aフレーム1" class="bird__frame bird__frame--1">
+                            <img src="images/birdA_frame2.png" alt="鳥Aフレーム2" class="bird__frame bird__frame--2">
+                        </div>
+                        <div class="bird bird--b">
+                            <img src="images/birdB_frame1.png" alt="鳥Bフレーム1" class="bird__frame bird__frame--1">
+                            <img src="images/birdB_frame2.png" alt="鳥Bフレーム2" class="bird__frame bird__frame--2">
+                        </div>
+                        <div class="bird bird--c">
+                            <img src="images/birdC_frame1.png" alt="鳥Cフレーム1" class="bird__frame bird__frame--1">
+                            <img src="images/birdC_frame2.png" alt="鳥Cフレーム2" class="bird__frame bird__frame--2">
+                        </div>
+                    </div>
+
+                    <!-- 右上角徽章 -->
+                    <div class="scope-hero__badge">
+                        <img src="images/badge-observe.png" alt="野鳥を観察しましょう">
+                    </div>
+
+                    <!-- 望远镜整体：外框图片 + 中间视频槽 -->
+                    <div class="scope-hero__binocular">
+                        <div class="scope-hero__binocular-inner">
+                            <!-- 中间预留给视频 / 背景图 -->
+                            <div class="scope-hero__video-slot">
+                                <video class="scope-hero__video" autoplay muted loop playsinline>
+                                    <source src="videos/sample1.mp4" type="video/mp4">
+                                </video>
+                            </div>
+
+                            <!-- 望远镜外框 PNG（SP / PC 两个版本） -->
+                            <img src="images/binocular-frame-sp.png" alt="双眼鏡フレーム(SP)"
+                                class="scope-hero__binocular-frame scope-hero__binocular-frame--sp">
+                            <img src="images/binocular-frame-pc.png" alt="双眼鏡フレーム(PC)"
+                                class="scope-hero__binocular-frame scope-hero__binocular-frame--pc">
+                        </div>
+
+                        <!-- 标题图片（SP 版） -->
+                        <div class="scope-hero__title-image scope-hero__title-image--sp">
+                            <img src="images/title-birdin-sp.png" alt="野鳥 IN 湿原(SP)">
+                        </div>
+                        <!-- 标题图片（PC 版） -->
+                        <div class="scope-hero__title-image scope-hero__title-image--pc">
+                            <img src="images/title-birdin-pc.png" alt="野鳥 IN 湿原(PC)">
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+
+
+        <!-- 弧形 5 カード セクション -->
+        <section class="bird-arc">
+
+            <!-- 顶部说明文字 -->
+            <header class="bird-arc__header">
+                <p class="bird-arc__copy-main">
+                    全日本では<br>
+                    <span class="bird-arc__copy-strong">690種類の鳥がいます。</span>
+                </p>
+                <p class="bird-arc__copy-note">
+                    (在来の野鳥624種および渡来種44種、外来種8種)
+                </p>
+            </header>
+
+            <!-- 弧形轮播区域 -->
+            <div class="bird-arc__carousel" data-arc-carousel>
+                <ul class="bird-arc__list" data-arc-track>
+                    <li class="bird-arc__item" data-arc-item data-pos="1">
+                        <div class="bird-arc__card">
+                            <img src="images/bird-arc__carousel/bird01.jpg" alt="鳥の写真01">
+                        </div>
+                    </li>
+
+                    <li class="bird-arc__item" data-arc-item data-pos="2">
+                        <div class="bird-arc__card">
+                            <img src="images/bird-arc__carousel/bird02.jpg" alt="鳥の写真02">
+                        </div>
+                    </li>
+
+                    <li class="bird-arc__item" data-arc-item data-pos="3">
+                        <div class="bird-arc__card">
+                            <img src="images/bird-arc__carousel/bird03.jpg" alt="鳥の写真03">
+                        </div>
+                    </li>
+
+                    <li class="bird-arc__item" data-arc-item data-pos="4">
+                        <div class="bird-arc__card">
+                            <img src="images/bird-arc__carousel/bird04.jpg" alt="鳥の写真04">
+                        </div>
+                    </li>
+
+                    <li class="bird-arc__item" data-arc-item data-pos="5">
+                        <div class="bird-arc__card">
+                            <img src="images/bird-arc__carousel/bird05.jpg" alt="鳥の写真05">
+                        </div>
+                    </li>
+
+                    <li class="bird-arc__item" data-arc-item data-pos="6">
+                        <div class="bird-arc__card">
+                            <img src="images/bird-arc__carousel/bird06.jpg" alt="鳥の写真06">
+                        </div>
+                    </li>
+
+                    <li class="bird-arc__item" data-arc-item data-pos="7">
+                        <div class="bird-arc__card">
+                            <img src="images/bird-arc__carousel/bird07.jpg" alt="鳥の写真07">
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!-- 底部标题 -->
+            <p class="bird-arc__label">
+                <span class="bird-arc__label-main">湿原・野鳥</span>
+            </p>
+
+        </section>
+
+
+        <!-- モザイク背景のヒーローセクション -->
+        <section class="catalog-hero">
+            <!-- 背景：格子は JS で生成 -->
+            <div class="catalog-hero__bg" data-bg-list>
+                <ul class="catalog-hero__bg-list" data-bg-grid>
+                    <!-- JS が <li data-bg-slot> ... </li> を追加 -->
+                </ul>
+            </div>
+            <!-- 前景のテキスト＆ボタン -->
+            <div class="catalog-hero__content">
+                <p class="catalog-hero__eyecatch">
+                    そして、湿原を囲む鳥が<br>
+                    約250種がいます。
+                </p>
+                <h2 class="catalog-hero__title">
+                    <span class="catalog-hero__title-main">鳥</span>
+                    <span class="catalog-hero__title-sub">と言えば、湿原だ。</span>
+                </h2>
+                <a href="./Kushiro/index.html" class="catalog-hero__button">
+                    <span class="catalog-hero__button-main">全図鑑一覧</span>
+                    <span class="catalog-hero__button-sub">(300種類)</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- 記事一覧ブロック -->
+        <section class="article-list">
+            <!-- 見出し -->
+            <header class="article-list__header">
+                <h2 class="article-list__title">記事一覧</h2>
+            </header>
+            <!-- JS 会往这里塞記事卡片 -->
+            <div class="article-list__items" id="article-list"></div>
+
+            <!-- JS 会往这里塞分页按钮 -->
+            <nav class="article-list__pagination" aria-label="記事一覧のページ送り">
+                <ul class="pagination" id="pagination"></ul>
+            </nav>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="site-footer__inner">
+
+            <!-- 项目名 -->
+            <h2 class="site-footer__title">日本湿原PROJECT</h2>
+
+            <!-- SNS 图标区域 -->
+            <div class="site-footer__social">
+                <a href="#" class="site-footer__social-link" aria-label="Instagram">
+                    <img src="images/icon-instagram.png" alt="Instagram">
+                </a>
+                <a href="#" class="site-footer__social-link" aria-label="X（旧Twitter）">
+                    <img src="images/icon-x.png" alt="X">
+                </a>
+                <a href="#" class="site-footer__social-link" aria-label="Facebook">
+                    <img src="images/icon-facebook.png" alt="Facebook">
+                </a>
+            </div>
+
+            <!-- 底部文本 -->
+            <p class="site-footer__copy">
+                © 2025 NWP PROJECT
+            </p>
+
+        </div>
+    </footer>
+</body>
+
+</html>
